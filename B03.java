@@ -1,31 +1,29 @@
 import java.util.*;
-class B01{
+class B03{
 	
-	int birth_year;
-	int age;
+	int days;
+	int seconds;
+	int m_count;
 
 	public static void main(String[] s){
-	new B01().input();
+	new B03().input();
 	}
         
 	void input(){
 	Scanner s= new Scanner(System.in);
-	System.out.println("태어난년도를 적으시오.");
-	this.birth_year=s.nextInt();
-	this.age = 2014 - birth_year;
+	System.out.println("날수를 입력하세오.");
+	this.days=s.nextInt();
 	print();
-
 	}
 
 	void print(){
 	
-	if(this.age <=20){
-	System.out.println("미성년자입니다.");
-	}
-	else
-	{
-	System.out.println("성인입니다.");
-	}
+	
+	this.seconds = days*24*60*60;
+	System.out.println("날수에 해당되는 기간은 모두"+seconds+ "초입니다.");
+	this.m_count = seconds/1000000;
+	if(seconds>=1000000) 
+	System.out.println("100만초가모두" + m_count+ "번이나 포함됩니다.");
 	
        }
       }		
