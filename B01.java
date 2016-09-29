@@ -12,7 +12,7 @@ class B01{
 	Scanner s= new Scanner(System.in);
 	System.out.println("태어난년도를 적으시오.");
 	this.birth_year=s.nextInt();
-	this.age = 2014 - birth_year;
+	this.age = 2014 - birth_year + 1;
 	print();
 
 	}
